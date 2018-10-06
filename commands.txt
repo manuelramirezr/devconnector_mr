@@ -1,3 +1,39 @@
 npm init
 npm i express mongoose passport passport-jwt jsonwebtoken body-parser bcryptjs validator
 npm i -D nodemon
+npm i -g create-react-app
+npm i -g npm
+create-react-app client
+
+Agregar en el forlder client en pakage.json después de los import de las librería 
+"proxy": "http://localhost:5000/" 
+Debe quedar algo como lo siguiente: 
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:5000/"
+}
+
+Esto permite hacer la invocación de los servicios sin tener que pone toda la url del server solo la dirección del api
+
+npm i concurrently : esto permite correr varios comandos de node por ejemplo para cuando se tiene el back y font en el mismo proyecto
+
+Los siguientes comando se debe hacer en el cliente
+npm i react-router-dom
+npm i axios : axios permite proxiar con los componentes del api
+npm i classnames
+npm i redux react-redux redux-thunk
+
+
