@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 
+const helthcheck = require("./routes/api/helthcheck");
 const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
@@ -29,6 +30,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 // User routes
+app.use("/api/helthcheck", helthcheck);
 app.use("/api/users", users);
 app.use("/api/profile", profile);
 app.use("/api/posts", posts);
