@@ -35,5 +35,12 @@ npm i react-router-dom
 npm i axios : axios permite proxiar con los componentes del api
 npm i classnames
 npm i redux react-redux redux-thunk
+npm i jwt-decode Es para decodificar el token para poderlo usar en todo el site como parte de la seguridad de auth
+ 
+
+To start project:
+1. Client : cd client, npm run start
+2. Server: nodemon start
+
 
 
